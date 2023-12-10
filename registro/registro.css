@@ -1,0 +1,45 @@
+body{
+    background: rgb(18,168,182);
+background: linear-gradient(306deg, rgba(18,168,182,1) 16%, rgba(215,68,204,1) 90%);
+background-attachment: fixed;
+}
+.img{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+img{
+    width: 150px;
+}
+.formulario{
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border: solid;
+    padding: 30px;
+}
+button{
+    color: white;
+    width: 80%;
+    margin: 10px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: rgb(6, 6, 46);
+}
+
+input{
+    text-align: center;
+    width: 80%;
+    height: 50px;
+}
+input::placeholder{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    font-size: 20px;
+    transition: 2s;
+}
