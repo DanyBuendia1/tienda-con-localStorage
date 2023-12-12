@@ -45,3 +45,7 @@ img{
 .tabla{
   width: 100%;
 }
+.card{
+border-color: aqua;
+padding: 15px;
+}
