@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     <title>Pagina Inicial</title>
   </head>
   <body data-bs-theme="dark">
 
     <nav class="nav nav-pills flex-column flex-sm-row ">
-      <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" onclick="cerrarsesion()">Cerrar Sesion</a>
-      <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-      <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-      <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
+      <a class=" btn btn-danger " aria-current="page" onclick="cerrarsesion()">Cerrar Sesion</a>
+      <a class="flex-sm-fill text-sm-center nav-link disabled" id="name">nombre de Usuario</a>
+      <a class="flex-sm-fill text-sm-center nav-link active" href="#">Productos</a>      
+      <a class="flex-sm-fill text-sm-center nav-link" href="./compras/compras.html">Mis compras</a>
     </nav>
     
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -135,7 +136,7 @@
           <p class="card-text">DESCRIPCION: Paquete de Jugos, frutas y verduras saludables<br>
             PRECIO: $300.00 <br></p>
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento1">Cerrar</button>
-          <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
+          <button class="card-link btn btn-dark" id="añadiralimentos1">Añadir producto</button>
         </div>
       </div>
     </dialog>
@@ -150,7 +151,7 @@
           <p class="card-text">DESCRIPCION: Paquete de frutas y verduras<br>
             PRECIO: $500.00 <br></p>
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento2">Cerrar</button>
-          <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
+          <button class="card-link btn btn-dark" id="añadiralimentos2">Añadir producto</button>
         </div>
       </div>
     </dialog>
@@ -165,7 +166,7 @@
           <p class="card-text">DESCRIPCION: Platillo de comida con carne de pollo<br>
             PRECIO: $65.00 <br></p>
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento3">Cerrar</button>
-          <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
+          <button class="card-link btn btn-dark" id="añadiralimentos3">Añadir producto</button>
         </div>
       </div>
     </dialog>

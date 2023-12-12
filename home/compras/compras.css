@@ -1,0 +1,25 @@
+.texto{
+    color: gray;
+    text-align: center;
+    border: solid;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: rgb(215, 208, 208);
+    transition: 2s;
+    margin-top: 150px;
+    font-family: monospace;
+}
+
+.texto:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 2s;
+    cursor: pointer;
+}
+input{
+    width: 60px;
+}
+
+.card{
+   width: 500px;
+   height: 300px;
+}

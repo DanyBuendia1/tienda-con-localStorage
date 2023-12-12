@@ -1,3 +1,8 @@
+//--------------DATOS DE LOCALSTORAGE-----------------
+let Admin = JSON.parse(localStorage.getItem("Admin")) || [];
+let Users = JSON.parse(localStorage.getItem("Users")) || [];
+//--------------DATOS DE LOCALSTORAGE-----------------
+
 function Mostrar(){
     let ver = document.getElementById("unlock");
     let contraseña = document.getElementById("contraseña");
@@ -10,9 +15,6 @@ function Mostrar(){
         contraseña.type="password";
     }
 }
-
-    let Admin = JSON.parse(localStorage.getItem("Admin")) || [];
-    let Users = JSON.parse(localStorage.getItem("Users")) || [];
 
 function datosvacios(){
     let correo = document.getElementById("correo").value;
@@ -64,6 +66,13 @@ function administradores(){
         {
             if(correo === Users[i].email && contraseña === Users[i].password)
             {
+                let datos ={
+                    id: Users[i].id,
+                    name: Users[i].name,
+                    email: Users[i].email,
+                    password: Users[i].password,
+                }
+                sessionStorage.setItem("Sesion",JSON.stringify(datos));
                 alert(`Bienvenido a esta tienda virtual ${Users[i].name}`,'','success')
                 usuarios();
             }
