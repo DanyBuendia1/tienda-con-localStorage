@@ -1,0 +1,42 @@
+body{
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(126, 151, 227) 45%, rgb(254, 254, 254) 92%);
+    background-attachment: fixed;
+    font-family: monospace;
+}
+.formulario{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+button{
+    width: 80%;
+}
+img{
+    width: 150px;
+    background-color: white;
+    border-radius: 50%;
+}
+.img{
+    margin-top: 100px;
+    margin-bottom: 20px ;
+    text-align: center;
+}
+input{
+    width: 80%;
+    height: 50px;
+    text-align: center;
+}
+
+#salir{
+    color: white;
+    background-color: brown;
+}
+#ver{
+    width: 15px;
+    height: auto;
+}

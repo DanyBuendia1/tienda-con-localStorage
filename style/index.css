@@ -7,8 +7,9 @@ body{
     margin: 0 auto;
     margin-top: 50px;
     border: solid;
+    border-radius: 15px;
     text-align: center;
-    padding: 15px;
+    padding: 30px;
     width: 80%;
     background-color: rgb(43, 43, 93);
 }
@@ -28,6 +29,7 @@ input::placeholder{
 }
 #entrar{
     width: 250px;
+    margin: 0 auto;
 }
 img{
     width: 80px;
@@ -37,7 +39,11 @@ img{
 }
 #unlock{
     width: 20px;
+    height: auto;
 }
 a{
     text-decoration: none;
+}
+h1{
+    margin-bottom: 30px;
 }

@@ -1,0 +1,47 @@
+body{
+    font-family: cursive;
+}
+
+#carouselExampleCaptions 
+  {
+    height: 400px; /* Ajusta el valor de acuerdo a tus necesidades */
+    margin-bottom: 50px;
+  }
+  
+  #carouselExampleCaptions .carousel-inner {
+    height: 100%; /* Ajusta el valor según sea necesario */
+  }
+  
+  #carouselExampleCaptions .carousel-item {
+    height: 100%; /* Ajusta el valor según sea necesario */
+  }
+  
+  #carouselExampleCaptions img {
+    height: 100%; /* Ajusta el valor según sea necesario */
+    object-fit: cover; /* Esto asegura que la imagen cubra todo el espacio disponible */
+  }
+
+.linea{
+    background-color: rgb(0, 115, 255);
+    padding: 2px;
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+h1{
+  margin: 80px;
+  color: blueviolet;
+  text-align: center;
+}
+
+.producto{
+  text-align: center;
+}
+img{
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+}
+.tabla{
+  width: 100%;
+}

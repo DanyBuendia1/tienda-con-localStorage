@@ -6,8 +6,13 @@ let contraseña = document.getElementById("contraseña").addEventListener("focus
 
 let Users = JSON.parse(localStorage.getItem("Users")) || [];
 
-    document.getElementById("registrar").addEventListener("click", function(){
+document.getElementById("registrar").addEventListener("click", function revisar(){
 
+    chequeocorreo();
+
+});
+
+function chequeocorreo(){
     let correo = document.getElementById("correo").value;
     
     let correovalido = Users.some(x => x.email == correo);
@@ -17,10 +22,18 @@ let Users = JSON.parse(localStorage.getItem("Users")) || [];
     }
     else
     {
-        Almacenar();
+        let Admin = JSON.parse(localStorage.getItem("Admin"));
+        let correoAdmin = Admin.some(x=> x.email == correo);
+        if(correoAdmin == true)
+        {
+            swal("El correo no es valido","","error");
+        }
+        else
+        {
+            Almacenar();
+        }
     }
-});
-
+}
 function Almacenar(){
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
@@ -68,5 +81,15 @@ function Almacenar(){
         {
             swal('La contraseña debe ser mayor a 6 dijitos',"","error")
         }
+    }
+}
+
+//#### teclado ####
+document.addEventListener("keydown", manejarTeclado);
+function manejarTeclado(event)
+{
+    if(event.key === "Enter")
+    {
+        chequeocorreo();
     }
 }
