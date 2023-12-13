@@ -4,7 +4,7 @@ let Users = JSON.parse(localStorage.getItem("Users")) || [];
 //--------------DATOS DE LOCALSTORAGE-----------------
 if(Users == "")
 {
-    swal("Bienvenido Usuario",'Para comenzar se requiere crear una cuenta en esta pagina','success')
+    swal("Bienvenido Usuario",'Para comenzar se requiere crear una cuenta en esta pagina. Nota: puedes iniciar como administrador como admin admin en email y password','success')
 }
 
 function Mostrar(){

@@ -25,6 +25,14 @@ function cerrarsesion(){
 
 if(Productos != "")
 {
+  let button = document.createElement("button");
+  let textbutton = document.createTextNode("Imprimir");
+  button.appendChild(textbutton);
+  button.addEventListener("click",()=>{
+    window.print();
+  })
+  document.getElementById("imprimir").appendChild(button)
+
   let top=document.querySelector(".top");
   let texto=document.querySelector(".texto");
 
@@ -32,7 +40,7 @@ if(Productos != "")
   texto.parentNode.removeChild(texto);
 
   let row =document.querySelector(".row");
-
+  
   let Sumatotal =0;
   for(i=0; i<Productos.length; i++)
   {
@@ -48,14 +56,13 @@ if(Productos != "")
       </div>
     </div>
     `
+
     let total = Productos[i].total;
     
     Sumatotal += total;
-    
-    console.log(total)
   }
 
   row.innerHTML += "<h1>Suma Total: "+Sumatotal+"</h1>"
-  console.log("Suma total "+Sumatotal)
+  swal(`La cuenta es de ${Sumatotal}`,'Gracias por ver mi proyecto, hecho por Dany Buendia','success');
 }
 //-----------------------Iteracion--------------

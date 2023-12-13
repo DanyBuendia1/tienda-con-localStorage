@@ -32,15 +32,24 @@ document.getElementById("salir").addEventListener("click", ()=>{
 function correovalidado()
 {
     let correo = document.getElementById("admincorreo").value;
+    let Users = JSON.parse(localStorage.getItem("Users")) || [];
 
-    let correoigual = Admin.some(x => x.email == correo)
-    if(correoigual)
+    let correoUsers = Users.some(x => x.email == correo);
+    if(correoUsers)
     {
-        swal('correo repetido','el correo no se puede almacenar por estar repetido','error')
+        swal('el correo ya lo uso un usuario','','info');
     }
     else
     {
-        validaciones();
+        let correoigual = Admin.some(x => x.email == correo)
+        if(correoigual)
+        {
+            swal('correo repetido','el correo no se puede almacenar por estar repetido','error')
+        }
+        else
+        {
+            validaciones();
+        }
     }
 }
 
@@ -91,14 +100,9 @@ function adminguardar(){
     Admin.push(datos);
     localStorage.setItem("Admin",JSON.stringify(Admin));
     swal('Los datos se registraron','','success')
-    setTimeout(() => {
-        limpiar();
-    }, 3000);
+    renderizarTabla();
 }
 
-function limpiar(){
-    location.reload();
-}
 
 //##### USO DE TECLADO ####
 document.addEventListener("keydown", manejarTeclado);
@@ -132,11 +136,16 @@ for (let i = 0; i < Admin.length; i++) {
 }
 
 function eliminar(id) {
-    let index = Admin.findIndex(admin => admin.id === id);
-    Admin.splice(index, 1);
-    renderizarTabla();
-    localStorage.setItem('Admin', JSON.stringify(Admin));
-    alert('Registro eliminado');
+
+    let confirmar = confirm('¿Te gustaria eliminar esta cuenta de administrador?');
+    if(confirmar)
+    {
+        let index = Admin.findIndex(admin => admin.id === id);
+        Admin.splice(index, 1);
+        renderizarTabla();
+        localStorage.setItem('Admin', JSON.stringify(Admin));
+        alert('Registro eliminado');
+    }
 }
 
 function modificar(id) {
@@ -148,11 +157,7 @@ function modificar(id) {
     let newEmail = prompt('Ingrese el nuevo correo electrónico:', Admin[index].email);
     let newPassword = prompt('Ingrese la nueva contraseña:', Admin[index].password);
 
-    let nombre = document.getElementById("adminnombre").value = Admin[index].name;
-    let correo = document.getElementById("admincorreo").value = Admin[index].email;
-    let contraseña = document.getElementById("admincontraseña").value = Admin[index].password;
-    let vcontraseña = document.getElementById("adminvcontraseña").value = Admin[index].password;
- 
+    
     // Actualiza los datos en el array 'Admin'.
     Admin[index].name = newName;
     Admin[index].email = newEmail;

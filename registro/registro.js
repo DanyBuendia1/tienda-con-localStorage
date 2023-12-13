@@ -14,32 +14,25 @@ document.getElementById("registrar").addEventListener("click", function revisar(
 
 function chequeocorreo(){
     let correo = document.getElementById("correo").value;
-    
-    let correovalido = Users.some(x => x.email == correo);
+    let Admin = JSON.parse(localStorage.getItem("Admin")) || [];
 
-    if(correovalido){
-        swal('Correo no valido', "", "error");
+    let correoadmin = Admin.some(x=>x.email == correo);
+
+    if(correoadmin)
+    {
+        swal('El correo no es validor','','error');
     }
     else
     {
-        let Admin = JSON.parse(localStorage.getItem("Admin"));
-        if(Admin == "")
+        let correoUser = Users.some(x=>x.email == correo);
+        if(correoUser)
         {
-            let correoAdmin = Admin.some(x=> x.email == correo);
-            if(correoAdmin == true)
-            {
-                swal("El correo no es valido","","error");
-            }
-            else
-            {
-                Almacenar();
-            }
+            swal('El correo no es valido','','error')
         }
         else
         {
             Almacenar();
         }
-        
     }
 }
 function Almacenar(){
