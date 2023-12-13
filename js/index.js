@@ -2,6 +2,10 @@
 let Admin = JSON.parse(localStorage.getItem("Admin")) || [];
 let Users = JSON.parse(localStorage.getItem("Users")) || [];
 //--------------DATOS DE LOCALSTORAGE-----------------
+if(Users == "")
+{
+    swal("Bienvenido Usuario",'Para comenzar se requiere crear una cuenta en esta pagina','success')
+}
 
 function Mostrar(){
     let ver = document.getElementById("unlock");

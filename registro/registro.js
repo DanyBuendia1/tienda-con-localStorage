@@ -1,7 +1,7 @@
 let contraseña = document.getElementById("contraseña").addEventListener("focus",()=>{
 
     let text = document.getElementById("texto");
-    text.innerHTML="Las contraseñas deben tener mas de 6 dijitos";
+    text.innerHTML="Las contraseñas deben tener almenos 6 dijitos";
 })
 
 let Users = JSON.parse(localStorage.getItem("Users")) || [];
@@ -23,15 +23,23 @@ function chequeocorreo(){
     else
     {
         let Admin = JSON.parse(localStorage.getItem("Admin"));
-        let correoAdmin = Admin.some(x=> x.email == correo);
-        if(correoAdmin == true)
+        if(Admin == "")
         {
-            swal("El correo no es valido","","error");
+            let correoAdmin = Admin.some(x=> x.email == correo);
+            if(correoAdmin == true)
+            {
+                swal("El correo no es valido","","error");
+            }
+            else
+            {
+                Almacenar();
+            }
         }
         else
         {
             Almacenar();
         }
+        
     }
 }
 function Almacenar(){
