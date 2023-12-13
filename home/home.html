@@ -11,7 +11,7 @@
   </head>
   <body data-bs-theme="dark">
 
-    <nav class="nav nav-pills flex-column flex-sm-row ">
+    <nav class="nav nav-pills flex-column flex-sm-row fixed-top">
       <a class=" btn btn-danger " aria-current="page" onclick="cerrarsesion()">Cerrar Sesion</a>
       <a class="flex-sm-fill text-sm-center nav-link disabled" id="name">nombre de Usuario</a>
       <a class="flex-sm-fill text-sm-center nav-link active" href="#">Productos</a>      
@@ -118,6 +118,7 @@
     <dialog class="alimentos">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <button class="card-link btn btn-danger" id="cerraralimentos">X</button>
           <img src="../img/alimentos.jpeg" class="card-img-top" alt="...">
           <h5 class="card-title">Alimentos</h5>
           <p class="card-text">DESCRIPCION: Paquete de alimentos saludables<br>
@@ -126,8 +127,7 @@
             <p id="total1">Total: $0.00</p>
             <button class="card-link btn btn-danger" onclick="resta1()">Resta</button>
             <button class="card-link btn btn-success" onclick="sumar1()">Suma</button><br><br>
-          <button class="card-link btn btn-danger" id="cerraralimentos">Cerrar</button>
-          <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
+            <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
         </div>
       </div>
     </dialog>
@@ -136,6 +136,7 @@
     <dialog class="alimento1">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento1">X</button>
           <img src="../img/alimento1.jpeg" class="card-img-top" alt="...">
           <h5 class="card-title">Paquete de bebidas</h5>
           <p class="card-text">DESCRIPCION: Paquete de Jugos, frutas y verduras saludables<br>
@@ -144,7 +145,6 @@
           <p id="total2">Total: $0.00</p>
           <button class="card-link btn btn-danger" onclick="resta2()">Resta</button>
           <button class="card-link btn btn-success" onclick="sumar2()">Suma</button><br><br>
-          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento1">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos1">Añadir producto</button>
         </div>
       </div>
@@ -155,6 +155,7 @@
     <dialog class="alimento2">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento2">X</button>
           <img src="../img/alimento2.jpg" class="card-img-top" alt="...">
           <h5 class="card-title">Frutas y verduras</h5>
           <p class="card-text">DESCRIPCION: Paquete de frutas y verduras<br>
@@ -164,7 +165,6 @@
           <p id="total3">Total: $0.00</p>
           <button class="card-link btn btn-danger" onclick="resta3()">Resta</button>
           <button class="card-link btn btn-success" onclick="sumar3()">Suma</button><br><br>
-          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento2">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos2">Añadir producto</button>
         </div>
       </div>
@@ -175,6 +175,7 @@
     <dialog class="alimento3">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento3">X</button>
           <img src="../img/platillo.jpeg" class="card-img-top" alt="...">
           <h5 class="card-title">Platillo de comida</h5>
           <p class="card-text">DESCRIPCION: Platillo de comida con carne de pollo<br>
@@ -183,7 +184,6 @@
             <p id="total4">Total: $0.00</p>
             <button class="card-link btn btn-danger" onclick="resta4()">Resta</button>
             <button class="card-link btn btn-success" onclick="sumar4()">Suma</button><br><br>  
-          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento3">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos3">Añadir producto</button>
         </div>
       </div>

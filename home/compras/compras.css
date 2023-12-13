@@ -28,9 +28,16 @@ body{
     margin: 0 auto;
     margin-bottom: 25px;
     border-color: green;
-    padding: 15px;
+    
 }
 img{
     width: 150px;
     height: 150px;
+}
+.row
+{
+    margin-top: 200px;
+}
+nav{
+    background-color: white;
 }

@@ -30,10 +30,13 @@ if(Productos != "")
 
   top.parentNode.removeChild(top);
   texto.parentNode.removeChild(texto);
- 
+
+  let row =document.querySelector(".row");
+
+  let Sumatotal =0;
   for(i=0; i<Productos.length; i++)
   {
-    document.querySelector(".row").innerHTML+=`
+    row.innerHTML+=`
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
       <div class="card" style="width: 18rem;">
         <img src="../../img/${Productos[i].image}" class="card-img-top" alt="...">
@@ -45,6 +48,14 @@ if(Productos != "")
       </div>
     </div>
     `
+    let total = Productos[i].total;
+    
+    Sumatotal += total;
+    
+    console.log(total)
   }
+
+  row.innerHTML += "<h1>Suma Total: "+Sumatotal+"</h1>"
+  console.log("Suma total "+Sumatotal)
 }
 //-----------------------Iteracion--------------
