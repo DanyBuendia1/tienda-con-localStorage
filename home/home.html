@@ -66,7 +66,7 @@
     <!---------------Productos------------>
     <div class="container">
       <h1>Productos</h1>
-      <div class="linea1"></div>
+      <div class="linea"></div>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
           <div class="card producto">
@@ -89,11 +89,11 @@
         </div>
         <!------------Alimento 1---------------->
         <!------------Alimento 2---------------->
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"o>
           <div class="card producto">
             <img src="../img/alimento2.jpg" style="width: 190px;" class="imagen card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title Textproducto">Paquete de bebidas</h5>
+              <h5 class="card-title Textproducto">Frutas y verduras</h5>
               <a class="btn btn-success letraboton letraboton" onclick="alimento2()">Ver Información</a>
             </div>
           </div>
@@ -122,7 +122,11 @@
           <h5 class="card-title">Alimentos</h5>
           <p class="card-text">DESCRIPCION: Paquete de alimentos saludables<br>
             PRECIO: $350.00 <br></p>
-          <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimentos">Cerrar</button>
+            <p>Cantidad: <input type="number" id="cantidad1" value="0" disabled></p>
+            <p id="total1">Total: $0.00</p>
+            <button class="card-link btn btn-danger" onclick="resta1()">Resta</button>
+            <button class="card-link btn btn-success" onclick="sumar1()">Suma</button><br><br>
+          <button class="card-link btn btn-danger" id="cerraralimentos">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos">Añadir producto</button>
         </div>
       </div>
@@ -133,9 +137,13 @@
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <img src="../img/alimento1.jpeg" class="card-img-top" alt="...">
-          <h5 class="card-title">Alimentos</h5>
+          <h5 class="card-title">Paquete de bebidas</h5>
           <p class="card-text">DESCRIPCION: Paquete de Jugos, frutas y verduras saludables<br>
             PRECIO: $300.00 <br></p>
+          <p>Cantidad <input type="number" id="cantidad2" value="0" disabled></p>
+          <p id="total2">Total: $0.00</p>
+          <button class="card-link btn btn-danger" onclick="resta2()">Resta</button>
+          <button class="card-link btn btn-success" onclick="sumar2()">Suma</button><br><br>
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento1">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos1">Añadir producto</button>
         </div>
@@ -148,9 +156,14 @@
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <img src="../img/alimento2.jpg" class="card-img-top" alt="...">
-          <h5 class="card-title">Alimentos</h5>
+          <h5 class="card-title">Frutas y verduras</h5>
           <p class="card-text">DESCRIPCION: Paquete de frutas y verduras<br>
             PRECIO: $500.00 <br></p>
+          
+            <p>Cantidad <input type="number" id="cantidad3" value="0" disabled></p>
+          <p id="total3">Total: $0.00</p>
+          <button class="card-link btn btn-danger" onclick="resta3()">Resta</button>
+          <button class="card-link btn btn-success" onclick="sumar3()">Suma</button><br><br>
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento2">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos2">Añadir producto</button>
         </div>
@@ -166,6 +179,10 @@
           <h5 class="card-title">Platillo de comida</h5>
           <p class="card-text">DESCRIPCION: Platillo de comida con carne de pollo<br>
             PRECIO: $65.00 <br></p>
+            <p>Cantidad <input type="number" id="cantidad4" value="0" disabled></p>
+            <p id="total4">Total: $0.00</p>
+            <button class="card-link btn btn-danger" onclick="resta4()">Resta</button>
+            <button class="card-link btn btn-success" onclick="sumar4()">Suma</button><br><br>  
           <button class="card-link btn btn-danger letraboton letraboton" id="cerraralimento3">Cerrar</button>
           <button class="card-link btn btn-dark" id="añadiralimentos3">Añadir producto</button>
         </div>

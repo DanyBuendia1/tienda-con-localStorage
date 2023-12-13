@@ -21,32 +21,30 @@ function cerrarsesion(){
     sessionStorage.clear();
   }
 }
+//-----------------------Iteracion--------------
 
 if(Productos != "")
 {
-    let contenedor = document.querySelector(".row");
-    let texto = document.querySelector(".texto");
-    texto.parentNode.removeChild(texto);//Elimina el div que dice no se ha agregado ningun producto
+  let top=document.querySelector(".top");
+  let texto=document.querySelector(".texto");
 
-    for(i=0; i<Productos.length; i++)
-    {
-
-        contenedor.innerHTML+=`
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-          <img src="../../img/${Productos[i].image}" class="card-img-top" alt="...">
-            <h4 class="card-subtitle mb-2 text-muted">${Productos[i].name}</h4>
-            <p class="card-text">${Productos[i].description}. <br>
-            Precio: $${Productos[i].price}</p>
-            <a class="card-link btn btn-danger" onclick="resta${Productos[i].id}()">restar</a>
-            <input type="number" id="producto${Productos[i].id}" value="0">
-            <a class="card-link btn btn-success" onclick="suma${Productos[i].id}()">sumar</a>
-            <br><br>
-            <p>Total: </p>
-          </div>
+  top.parentNode.removeChild(top);
+  texto.parentNode.removeChild(texto);
+ 
+  for(i=0; i<Productos.length; i++)
+  {
+    document.querySelector(".row").innerHTML+=`
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+      <div class="card" style="width: 18rem;">
+        <img src="../../img/${Productos[i].image}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Nombre: ${Productos[i].name}</p>
+          <p class="card-text">Description: ${Productos[i].description}</p>
+          <p class="card-text">total: $${Productos[i].total}</p>
         </div>
       </div>
-        `
-    }
+    </div>
+    `
+  }
 }
+//-----------------------Iteracion--------------
